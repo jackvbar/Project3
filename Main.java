@@ -74,7 +74,9 @@ public class Main {
         /* Print welcome message */
                System.out.println("Welcome to the Annual Lawn Game Olympics, Please read the following instructions." +
                        "\nEnter the letter e or the word events for a list of today's events.\nEnter the letter o or the word olympians for a list of the competing olympians." +
-                       "\nEnter the letter h or the word help to display some helpful tips if you are having trouble. ");
+                       "\nEnter the letter t or the work teams to create and see Olympian teams." +
+                       "\nEnter the letter h or the word help to display some helpful tips if you are having trouble.")
+              ;
 
            }
 
@@ -97,6 +99,7 @@ public class Main {
         System.out.println("Your input is case sensitive, make sure you are using lowercase letters and try again.\n" +
                 "Remember, entering the letter e or the word events will display a list of today's events.\n" +
                 "Entering the letter o or the word olympians will display a list of the olympians competing today.\n" +
+                "Entering the letter t or the word teams will create and display teams for the Yard Game Olympics.\n" +
                 "Entering the letter h or the word help brings you to this message.\n" +
                 "Entering anything other than the above arguments will not work.");
     }
