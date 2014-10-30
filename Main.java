@@ -31,10 +31,7 @@ public class Main {
             }catch(IOException ioe){
                 System.out.println("IO Exception");
            }
-
-
-        BufferedReader BuffRead = new BufferedReader(new FileReader(File));
-            Main.InitializeAndWelcome();
+        Main.InitializeAndWelcome();
 
         /*Create userInput variable*/
         String userMove;
@@ -56,7 +53,7 @@ public class Main {
                 displayHelp();
             }
             else if (userMove.equals("t") || userMove.equals("teams")){
-                getTeams();
+                TeamManager.teamManager();
             }
             else if (userMove.equals("q") || userMove.equals("quit")) {
                     System.out.println("Thank you for playing, goodbye");

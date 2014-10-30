@@ -4,7 +4,7 @@ package com.company;
  * Created by jack on 10/7/2014.
  */
 public class CornHoleEvent extends Event{
-    int numBeanBags;
+    int numBeanBags = 4;
 
     public CornHoleEvent(String name, int playTo, boolean isPlayToExact, int playDistance) {
         super(name, playTo, isPlayToExact, playDistance);

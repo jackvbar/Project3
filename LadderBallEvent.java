@@ -4,7 +4,7 @@ package com.company;
  * Created by jack on 10/7/2014.
  */
 public class LadderBallEvent extends Event{
-    int numRungs;
+    int numRungs = 3;
 
     public LadderBallEvent(String name, int playTo, boolean isPlayToExact, int playDistance) {
         super(name, playTo, isPlayToExact, playDistance);

@@ -4,8 +4,8 @@ package com.company;
  * Created by jack on 10/7/2014.
  */
 public class WashoosEvent extends Event{
-    boolean hasAutoWinStick;
-    int numWashoos;
+    boolean hasAutoWinStick = false;
+    int numWashoos = 8;
 
     public WashoosEvent(String name, int playTo, boolean isPlayToExact, int playDistance) {
         super(name, playTo, isPlayToExact, playDistance);

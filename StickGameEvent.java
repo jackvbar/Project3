@@ -4,7 +4,7 @@ package com.company;
  * Created by jack on 10/7/2014.
  */
 public class StickGameEvent extends Event{
-    int frisbeeSize;
+    int frisbeeSize = 6;
 
     public StickGameEvent(String name, int playTo, boolean isPlayToExact, int playDistance) {
         super(name, playTo, isPlayToExact, playDistance);

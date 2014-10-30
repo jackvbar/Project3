@@ -4,7 +4,7 @@ package com.company;
  * Created by jack on 10/7/2014.
  */
 public class HorseShoesEvent extends Event {
-    int numHorseShoes;
+    int numHorseShoes = 2;
 
     public HorseShoesEvent(String name, int playTo, boolean isPlayToExact, int playDistance) {
         super(name, playTo, isPlayToExact, playDistance);
