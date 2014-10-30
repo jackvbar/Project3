@@ -14,7 +14,7 @@ public class TeamManager {
 
 
 
-    public Team teamManager(){
+    public TeamManager(){
         for(int i = 0; i < teamArray.length; i++){
             teamArray[i] = new Team();
         }
@@ -31,9 +31,7 @@ public class TeamManager {
 
 
             if(competeTeam[random1] != null && competeTeam[random2] != null){
-                teamArray[counter].SetInfo(competeTeam[random1], competeTeam[random2], 0, 0);
-
-
+                teamArray[counter].createTeam(competeTeam[random1], competeTeam[random2], 0, 0);
                 counter++;
                 if(random1 == random2){
                     counter--;
@@ -47,7 +45,7 @@ public class TeamManager {
 
         }
 
-
+        getTeamArray();
     }
     public Team[] getTeamArray(){
         return this.teamArray;

@@ -16,7 +16,6 @@ public class Main {
        try{
            BufferedReader BuffRead= new BufferedReader(new FileReader(args[0]));
            String line;
-           boolean firstline = false;
            while((line=BuffRead.readLine())!=null)
 
            {
@@ -34,39 +33,41 @@ public class Main {
         Main.InitializeAndWelcome();
 
         /*Create userInput variable*/
-        String userMove;
+        String userTyped;
+        boolean escape = false;
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
                try{
-                   userMove= userInput.readLine();
+                   userTyped= userInput.readLine();
                }catch(IOException ioe){
                    System.out.println("Error");
                    return;
                }
-            while (userMove != "quit" || userMove != "q")
-            if (userMove.equals("e") || userMove.equals("events")) {
+            while (!escape){
+            if (userTyped.equals("e") || userTyped.equals("events")) {
             /*make a call to displayEvents method*/
                 EventManager();
-            } else if (userMove.equals("o") || userMove.equals("olympians")) {
+            } else if (userTyped.equals("o") || userTyped.equals("olympians")) {
             /*make a call to the displayOlympians method*/
                 OlympianManager();
-            } else if (userMove.equals("h") || userMove.equals("help")) {
+            } else if (userTyped.equals("h") || userTyped.equals("help")) {
                 displayHelp();
             }
-            else if (userMove.equals("t") || userMove.equals("teams")){
-                TeamManager.teamManager();
+            else if (userTyped.equals("t") || userTyped.equals("teams")){
+                displayTeams();
             }
-            else if (userMove.equals("q") || userMove.equals("quit")) {
+            else if (userTyped.equals("q") || userTyped.equals("quit")) {
+                    escape=true;
                     System.out.println("Thank you for playing, goodbye");
                     EndProgram();
             } else {
                 System.out.println("Invalid input, entering the letters e, o, h, or q or the words events, olympians, help, or quit as they appear before you.");
                 try{
-                    userMove = userInput.readLine();
+                    userTyped = userInput.readLine();
             }catch(IOException ioe){
                     System.out.println("Error");
                     return;
                 }
-        }
+        }}
     }
 
     public static void InitializeAndWelcome(){
@@ -88,7 +89,7 @@ public class Main {
         OlympManage.displayOlympians();
     }
 
-   public static void teamManager(){
+   public static void displayTeams(){
        TeamManager teams = new TeamManager();
        teams.displayTeams();
    }
@@ -100,7 +101,7 @@ public class Main {
                 "Entering anything other than the above arguments will not work.");
     }
     public static void EndProgram(){
-        System.exit(1);
+        System.exit(0);
     }
 
 }

@@ -30,7 +30,7 @@ public class Team {
         this.loser = loser;
 
     }
-    public void SetInfo(Olympian o1, Olympian o2, int victory, int defeat){
+    public void createTeam(Olympian o1, Olympian o2, int victory, int defeat){
         this.olympian1 = o1;
         this.olympian2 = o2;
         this.winner = victory;

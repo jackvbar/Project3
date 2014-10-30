@@ -27,15 +27,15 @@ public class OlympianManager {
             Integer count = 0;
 
             while ((line2 = inputStream.readLine()) != null) {
-                if(firstLine == true){
+                if(firstLine){
                     List<String> fileList = Arrays.asList(line2.split(","));
 
                     int age = Integer.parseInt(fileList.get(2).replaceAll("\\s", ""));
                     String cleansed = fileList.get(1).replaceAll("\\s", "");
                     if(cleansed.equals("M")){
-                       olympians[count].setInfo(fileList.get(0), Sex.MALE, age);
+                       olympians[count].defineOlympian(fileList.get(0), Sex.MALE, age);
                     } else {
-                        olympians[count].setInfo(fileList.get(0), Sex.FEMALE, age);
+                        olympians[count].defineOlympian(fileList.get(0), Sex.FEMALE, age);
                     }
 
 
